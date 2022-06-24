@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --mainColor: #ff5722;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        width: 557px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Start Setting Box */
+.setting-box {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    min-height: 100vh;
+    width: 250px;
+    background: #fff;
+    z-index: 100;
+    transition: .3s;
+}
+
+.setting-box.options {
+    left: 0;
+}
+
+.setting-box .toggle-setting {
+    position: absolute;
+    right: -30px;
+    top: 150px;
+    width: 30px;
+    background: #fff;
+    text-align: center;
+    padding: 7px 0;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.setting-box .setting-content .option-box {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.setting-box .setting-content .option-box h3 {
+    color: #666;
+}
+
+.setting-box .setting-content .option-box .color-list {
+    margin: 15px 0 0px;
+    text-align: center;
+}
+
+.setting-box .setting-content .option-box .color-list li {
+    width: 24px;
+    opacity: .5;
+    height: 24px;
+    background: red;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.setting-box .setting-content .option-box .color-list li.active {
+    box-sizing: content-box;
+    border: 3px solid #fff;
+    opacity: 1;
+}
+
+.setting-box .setting-content .option-box .color-list li:first-child {
+    background-color: #ff5722;
+}
+
+.setting-box .setting-content .option-box .color-list li:nth-child(2) {
+    background-color: #e91e63;
+}
+
+.setting-box .setting-content .option-box .color-list li:nth-child(3) {
+    background-color: #673ab7;
+}
+
+.setting-box .setting-content .option-box .color-list li:nth-child(4) {
+    background-color: #2196f3;
+}
+
+.setting-box .setting-content .option-box .color-list li:nth-child(5) {
+    background-color: #4caf50;
+}
+
+/* Start Landing */
+.landing-page {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(../imgs/landing-1.jpg);
+    background-size: cover;
+}
+
+.landing-page .overlay {
+    position: absolute;
+    background-color: rgb(0 0 0 / 60%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.landing-page .container header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    color: white;
+    padding: 30px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-page .container header .logo {
+    width: 250px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.landing-page .container header nav .toggle {
+    display: none;
+    font-size: 20px;
+    color: var(--mainColor);
+    position: relative;
+    right: 30px;
+}
+
+@media (max-width: 767px) {
+    .landing-page .container header nav .toggle {
+        display: block;
+
+    }
+}
+
+.landing-page .container header nav .links {
+    display: flex;
+}
+
+
+
+@media (max-width: 767px) {
+    .landing-page .container header nav .links {
+        display: none;
+    }
+}
+
+.landing-page .container header nav .links.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    height: 200px;
+    justify-content: space-between;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.landing-page .container header nav .links li a {
+    margin-left: 22px;
+    color: white;
+    font-size: 18px;
+}
+
+.landing-page .container header nav .links li a:hover,
+.landing-page .container header nav .links li a.active {
+    color: var(--mainColor);
+}
+
+.landing-page .container .landing-text {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .landing-page .container .landing-text {
+        width: 100%;
+    }
+}
+
+.landing-page .container .landing-text h1 {
+    font-size: 44px;
+    margin: 0 0 20px;
+    line-height: 1.6;
+
+}
+
+.landing-page .container .landing-text h1 span {
+    color: var(--mainColor);
+    border-bottom-color: var(--mainColor);
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 991px) {
+    .landing-page .container .landing-text h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-page .container .landing-text h1 {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .landing-page .container .landing-text h1 {
+        font-size: 30px;
+    }
+}
+
+.landing-page .container .landing-text p {
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+@media (max-width: 991px) {
+    .landing-page .container .landing-text p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-page .container .landing-text p {
+        line-height: 1.6;
+        font-size: 16px;
+    }
+}

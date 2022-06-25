@@ -142,6 +142,26 @@ ul {
     background-color: #4caf50;
 }
 
+.setting-box .setting-content .option-box .random-back .yes,
+.setting-box .setting-content .option-box .random-back .no {
+    font-weight: bold;
+    width: 50px;
+    display: inline-block;
+    background: var(--mainColor);
+    color: #fff;
+    padding: 7px;
+    margin: 15px 7px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    opacity: .5;
+}
+
+
+.setting-box .setting-content .option-box .random-back span.active {
+    opacity: 1;
+}
+
 /* Start Landing */
 .landing-page {
     position: relative;
@@ -291,4 +311,58 @@ ul {
         line-height: 1.6;
         font-size: 16px;
     }
+}
+
+/* Start About */
+
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about .container .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .about .container .about-content {
+        flex-direction: column;
+    }
+}
+
+.about .container .about-content .info-about {
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+    .about .container .about-content .info-about {
+        padding: 0;
+        margin-bottom: 25px;
+        text-align: center;
+        flex: 1;
+    }
+}
+
+.about .container .about-content .info-about h3 {
+    color: var(--mainColor);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.about .container .about-content .info-about p {
+    line-height: 1.8;
+    color: #525050;
+}
+
+.about .container .about-content .about-img {
+    position: relative;
+    flex: 1;
+    text-align: end;
+}
+
+
+.about .container .about-content .about-img img {
+    max-width: 100%;
 }

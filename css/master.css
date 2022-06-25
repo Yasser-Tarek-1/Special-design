@@ -25,6 +25,7 @@ ul {
 
 :root {
     --mainColor: #ff5722;
+    --secPadding: 50px;
 }
 
 .container {
@@ -314,10 +315,9 @@ ul {
 }
 
 /* Start About */
-
 .about {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: var(--secPadding);
+    padding-bottom: var(--secPadding);
 }
 
 .about .container .about-content {
@@ -362,7 +362,153 @@ ul {
     text-align: end;
 }
 
-
 .about .container .about-content .about-img img {
+    width: 350px;
+}
+
+@media (max-width: 575px) {
+    .about .container .about-content .about-img img {
+        width: 300px;
+    }
+}
+
+/* Start Our Skills */
+.skills {
+    padding-top: var(--secPadding);
+    padding-bottom: var(--secPadding);
+    background-color: #eee;
+}
+
+.skills .container h3 {
+    color: var(--mainColor);
+    font-size: 35px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+.skills .container .skill-box {
+    background-color: #fff;
+    display: flex;
+    padding: 15px;
+    margin: 0 0 15px;
+    align-items: center;
+}
+
+.skills .container .skill-box .skill-name {
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skills .container .skill-box .skill-progress {
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .container .skill-box .skill-progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--mainColor);
+    height: 100%;
+    width: 0;
+    transition: all 0.7s;
+}
+
+.ratio::before {
+    position: absolute;
+    content: attr(data-progress);
+    height: 20px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    text-align: center;
+    padding: 6px;
+    color: #fff;
+}
+
+/* Start Our Gallrey */
+
+.gallrey {
+    padding-top: var(--secPadding);
+    padding-bottom: var(--secPadding);
+}
+
+.gallrey .container h3 {
+    color: var(--mainColor);
+    font-size: 35px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+.gallrey .container .imgs-box {
+    text-align: center;
+}
+
+.gallrey .container .imgs-box img {
+    width: 220px;
+    height: 130px;
+    padding: 3px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* JS */
+.popup-overlay {
+    position: fixed;
+    background-color: rgb(0 0 0 / .7);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+
+.popup-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 102;
+}
+
+@media (max-width: 767px) {
+    .popup-box {
+        width: 80%;
+    }
+}
+
+.popup-box h3 {
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: var(--mainColor);
+    text-transform: capitalize;
+}
+
+.popup-box img {
     max-width: 100%;
+}
+
+.close-span {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background: var(--mainColor);
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
 }

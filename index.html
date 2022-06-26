@@ -40,10 +40,54 @@
             <span class="no" data-background="no">No</span>
           </div>
         </div>
+        <div class="option-box">
+          <h3>Bullets</h3>
+          <div class="bull">
+            <span class="true active" data-bull="yes">Show</span>
+            <span class="false" data-bull="no">Hidden</span>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- Bullets -->
+    <!-- <div class="nav-bullets">
+      <div class="bullet" data-place="home">
+        <div class="sec">Home</div>
+      </div>
+      <div class="bullet" data-place="about">
+        <div class="sec">About Us</div>
+      </div>
+      <div class="bullet" data-place="gallrey">
+        <div class="sec">Our Gallrey</div>
+      </div>
+      <div class="bullet" data-place="features">
+        <div class="sec">Our Features</div>
+      </div>
+    </div> -->
+    <div class="nav-bullets">
+      <a href="#home">
+        <div class="bullet" data-place="home">
+          <div class="sec">Home</div>
+        </div></a
+      >
+      <a href="#about">
+        <div class="bullet" data-place="about">
+          <div class="sec">About Us</div>
+        </div></a
+      >
+      <a href="#gallrey">
+        <div class="bullet" data-place="gallrey">
+          <div class="sec">Our Gallrey</div>
+        </div></a
+      >
+      <a href="#features">
+        <div class="bullet" data-place="features">
+          <div class="sec">Our Features</div>
+        </div></a
+      >
+    </div>
     <!-- Landing -->
-    <div class="landing-page">
+    <div class="landing-page" id="home">
       <div class="overlay"></div>
       <div class="container">
         <header>
@@ -119,7 +163,7 @@
       </div>
     </div>
     <!-- Our Gallrey  -->
-    <div class="gallrey">
+    <div class="gallrey" id="gallrey">
       <div class="container">
         <h3>Our Gallrey</h3>
         <div class="imgs-box">
@@ -192,7 +236,7 @@
       </div>
     </div>
     <!-- Features -->
-    <div class="features">
+    <div class="features" id="features">
       <div class="container">
         <h3>Our Features</h3>
         <div class="feats">
@@ -243,8 +287,47 @@
         </div>
       </div>
     </div>
+    <!-- Testimonials -->
+    <div class="testimonials">
+      <div class="container">
+        <h3>Testimonials</h3>
+        <div class="testimonials-content">
+          <div class="ts-box">
+            <p>I am very happy to do business with this good Agency</p>
+            <div class="info">
+              <img src="https://via.placeholder.com/60/777" alt="" />
+              <div class="user">
+                <h4>Mohamed Eid</h4>
+                <p>SEO Manger</p>
+              </div>
+            </div>
+          </div>
+          <div class="ts-box">
+            <p>I am very happy to do business with this good Agency</p>
+            <div class="info">
+              <img src="https://via.placeholder.com/60/CCC/" alt="" />
+              <div class="user">
+                <h4>Marawan Samir</h4>
+                <p>UI & UX</p>
+              </div>
+            </div>
+          </div>
+          <div class="ts-box">
+            <p>I am very happy to do business with this good Agency</p>
+            <div class="info">
+              <img src="https://via.placeholder.com/60/EEE/" alt="" />
+              <div class="user">
+                <h4>Aya Osama</h4>
+                <p>Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/color-localstorage.js"></script>
     <script src="js/landing-localstorage.js"></script>
+    <script src="js/bullets-localstorage.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

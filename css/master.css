@@ -821,3 +821,100 @@ ul {
     line-height: 1.6;
     color: #777;
 }
+
+/* Start Contact */
+.contact {
+    padding-top: var(--secPadding);
+    padding-bottom: var(--secPadding);
+}
+
+.contact .container h3 {
+    color: var(--mainColor);
+    font-size: 35px;
+    margin: 0px 0px 30px;
+    text-align: center;
+}
+
+
+.contact .container .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .contact .container .contact-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 991px) {
+    .contact .container .contact-content .mail-content {
+        margin-bottom: 20px;
+    }
+}
+
+.contact .container .contact-content .mail-content h4 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contact .container .contact-content .mail-content .mai {
+    color: var(--mainColor);
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px auto;
+    display: block;
+}
+
+.contact .container .contact-content .mail-content .social {
+    text-align: center;
+    font-size: 25px;
+}
+
+.contact .container .contact-content .mail-content .social a {
+    margin: 0 5px;
+    color: #333333;
+}
+
+.contact .container .contact-content form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.contact .container .contact-content form .info input {
+    padding: 7px 12px;
+    outline: none;
+}
+
+@media (max-width: 575px) {
+    .contact .container .contact-content form .info input {
+        width: 100%;
+        margin: 3px auto;
+    }
+}
+
+.contact .container .contact-content form textarea {
+    margin: 7px auto;
+    width: 100%;
+    padding: 12px 10px;
+    min-height: 200px;
+    outline: none;
+}
+
+
+
+.contact .container .contact-content form input[type="submit"] {
+    display: block;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background: var(--mainColor);
+    padding: 7px 30px;
+    font-weight: bold;
+    border-radius: 4px;
+}

@@ -117,3 +117,16 @@ document.addEventListener("click", (e) => {
     document.querySelector(".popup-overlay").remove();
   }
 });
+
+/*
+            Contact
+*/
+
+document.querySelector(".contact form").onsubmit = function (e) {
+  let mail = document.querySelector("form .info .mail").value;
+  let regEx = /\w+@\w+\.\w+/gi;
+  if (regEx.test(mail) === false) {
+    return false;
+    // e.preventDefault();
+  }
+};

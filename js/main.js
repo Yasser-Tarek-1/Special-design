@@ -9,6 +9,17 @@ document.querySelector(".toggle-setting").addEventListener("click", () => {
   document.querySelector(".setting-box").classList.toggle("options");
 });
 
+// Rest Option
+document
+  .querySelector(".setting-box .rest-opt")
+  .addEventListener("click", () => {
+    localStorage.clear();
+    // localStorage.removeItem("color-opt");
+    // localStorage.removeItem("background-option");
+    // localStorage.removeItem("localBull");
+    window.location.reload();
+  });
+
 /*
                 Header
               Show Links  

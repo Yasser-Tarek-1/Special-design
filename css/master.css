@@ -73,6 +73,7 @@ ul {
     background: #fff;
     z-index: 100;
     transition: .3s;
+    border: 1px solid #eee;
 }
 
 .setting-box.options {
@@ -89,6 +90,8 @@ ul {
     padding: 7px 0;
     transition: .3s;
     cursor: pointer;
+    border: 1px solid #eee;
+    border-left: none;
 }
 
 .setting-box .setting-content .option-box {
@@ -180,6 +183,18 @@ ul {
     opacity: 1;
 }
 
+.setting-box .rest-opt {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background: #f44336;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
 /* Start Bullets*/
 .nav-bullets {
     position: fixed;
@@ -211,6 +226,8 @@ ul {
     top: -6px;
     display: none;
     transition: 0.3s;
+    cursor: default;
+    pointer-events: none;
 }
 
 .nav-bullets .bullet .sec::before {

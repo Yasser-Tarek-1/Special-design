@@ -7,14 +7,17 @@ let nav = document.querySelector(".nav-bullets");
 let localBull = localStorage.getItem("localBull");
 
 if (localBull !== null) {
+  bull.forEach((span) => {
+    span.classList.remove("active");
+  });
   if (localBull === "no") {
     nav.classList.add("hidden");
     document.querySelector(".bull span.false").classList.add("active");
-    document.querySelector(".bull span.true").classList.remove("active");
+    // document.querySelector(".bull span.true").classList.remove("active");
   } else {
     nav.classList.remove("hidden");
     document.querySelector(".bull span.true").classList.add("active");
-    document.querySelector(".bull span.false").classList.remove("active");
+    // document.querySelector(".bull span.false").classList.remove("active");
   }
 }
 

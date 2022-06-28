@@ -134,7 +134,6 @@ document.addEventListener("click", (e) => {
 /*
             Contact
 */
-
 document.querySelector(".contact form").onsubmit = function (e) {
   let mail = document.querySelector("form .info .mail").value;
   let regEx = /\w+@\w+\.\w+/gi;
@@ -143,3 +142,8 @@ document.querySelector(".contact form").onsubmit = function (e) {
     // e.preventDefault();
   }
 };
+
+/*
+            Footer
+*/
+document.querySelector("footer span").innerHTML = new Date().getFullYear();

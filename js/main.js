@@ -37,6 +37,19 @@ bar.addEventListener("click", () => {
   });
 });
 
+document.addEventListener("click", (e) => {
+  if (e.target !== bar) {
+    if (links.classList.contains("show")) {
+      links.classList.toggle("show");
+    }
+  }
+});
+
+// Stop Propagation On Links
+links.onclick = (e) => {
+  e.stopPropagation();
+};
+
 /*
                 Our Skills
 */
